@@ -1,0 +1,9 @@
+a{
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.sidebar_selected {
+    background: #eff0ee;
+    transition: .5s;
+}
