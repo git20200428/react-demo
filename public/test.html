@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr = ['a','b','c'],
+            obj = {name:'zhang',age:34};
+        arr.name = 'arr';
+
+        // Object.assign(arr,5,{value:100,enumerable:true})
+        for(let ind in arr){
+            console.log( ind, arr[ind]);
+        }
+        for(let val of arr){
+            console.log( val);
+        }
+        console.log("-------------");
+        obj.addr = '中明路'
+        for(let key in obj){
+            console.log(key,obj[key]);
+        }
+    </script>
+</body>
+</html>
