@@ -6,22 +6,46 @@
 </head>
 <body>
     <script>
-        let arr = ['a','b','c'],
-            obj = {name:'zhang',age:34};
-        arr.name = 'arr';
-
-        // Object.assign(arr,5,{value:100,enumerable:true})
-        for(let ind in arr){
-            console.log( ind, arr[ind]);
-        }
-        for(let val of arr){
-            console.log( val);
-        }
-        console.log("-------------");
-        obj.addr = '中明路'
-        for(let key in obj){
-            console.log(key,obj[key]);
-        }
+       // function A(name){
+       //    this.name = name;
+       // }
+       // function B(age){
+       //     this.age = age;
+       // }
+       // B.prototype = new A('zhangsan');
+       // let b = new B(18);
+       // console.log(b)
+       // for(let val in b){
+       //     console.log(val,b[val])
+       // }
+        let obj ={};
+       Object.defineProperty(obj, "key1", {
+           enumerable: true,
+           configurable: true,
+           writable: true,
+           value: "key1 static"
+       });
+       Object.defineProperty(obj, "key2", {
+           enumerable: true,
+           configurable: true,
+           writable: false,
+           value: "key2 configurable"
+       });
+       Object.defineProperty(obj, "key3", {
+           enumerable: true,
+           configurable: false,
+           writable: true,
+           value: "key3 enumerable"
+       });
+       Object.defineProperty(obj, "key4", {
+           enumerable: false,
+           configurable: true,
+           writable: true,
+           value: "key4 configurable"
+       });
+       for(let key in obj){
+           console.log(key)
+       }
     </script>
 </body>
 </html>
